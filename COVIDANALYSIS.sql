@@ -1,20 +1,47 @@
-create TABLE coviddeaths
+CREATE TABLE coviddeaths(
 
+COPY coviddeaths FROM 'C:\Users\Public\Documents\coviddeaths.csv' DELIMITER ',' CSV HEADER;
+  
+);
+CREATE TABLE Vaccinations(
 
-
-
-
-
-
-
-
-
-
-
-
-SELECT * FROM coviddeaths;
-SELECT * FROM vaccination;
-
+iso_code VARCHAR,
+  continent VARCHAR,
+  location VARCHAR,
+  Date DATETIME,
+  new_tests BIGINT,
+  total_tests BIGINT,
+  total_test_per_thousand NUMERIC,
+  new_test-per_thousand  NUMERIC,
+  new_test_smoothed BIGINT,
+  new_test_smoothed_per_thousand NUMERIC,
+  positive_rate NUMERIC,
+  test_per_case FLOAT8,
+  test_units VARCHAR,
+  total_vaccinations BIGINT,
+  people_vaccinated BIGINT,
+  people_fully_vaccinated BIGINT,
+  new_vaccinations BIGINT,
+  new_vaccination smoothed BIGINT,
+  total_vaccination_per_hundred FLOAT8,
+  people_vaccinated_per_thousand FLOAT8,
+  people_fully-vaccinated_per_hundred FLOAT8,
+  new_vaccination_smoothed_per_million  BIGINT,
+  stringency_index FLOAT8,
+  population_density FLOAT8,
+  median_age FLOAT8,
+  aged_65_older NUMERIC,
+  aged_70_older NUMERIC,
+  gdp_per_capita FLOAT8,
+  extreme_poverty FLOAT8,
+  cardiovasc_death_rate FLOAT8,
+  death_rate FLOAT8,
+  female_smokers FLOAT8,
+  male_smokers FLOAT8,
+  handwashing_facilities NUMERIC,
+  hospital_beds_per_thousand NUMERIC,
+  life_expectancy NUMERIC,
+  human_development_index NUMERIC);
 
 COPY vaccination FROM 'C:\Users\Public\Documents\Vaccination.csv' DELIMITER ',' CSV HEADER;
 SELECT * FROM vaccination;
